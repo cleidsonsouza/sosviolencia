@@ -1,34 +1,60 @@
 version: "2.0"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
+  - cumprimentar
+  - informar
+  - despedir  
+  
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_cumprimentar:  
+  - text: "É realmente uma alegria poder te atender por aqui. \nEm que posso te ajudar nesse momento?"
+    buttons:
+      - title: "Fui vítima de violência"
+        payload: '/informar'  
+      - title: "Estou ajudando alguém que foi vítima de violência"
+        payload: '/informar'  
+      - title: "Desejo apenas informações sobre violência"
+        payload: '/informar'
+  
+  utter_informar:
+  - text: "informacao 1 Isso... aquilo..."
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_despedir:
+  - text: "Até mais... Precisando, estou à disposição."
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+# intents:
+#   - greet
+#   - goodbye
+#   - affirm
+#   - deny
+#   - mood_great
+#   - mood_unhappy
+#   - bot_challenge
+
+# responses:
+#   utter_greet:
+#   - text: "Hey! How are you?"
+
+#   utter_cheer_up:
+#   - text: "Here is something to cheer you up:"
+#     image: "https://i.imgur.com/nGF1K8f.jpg"
+
+#   utter_did_that_help:
+#   - text: "Did that help you?"
+
+#   utter_happy:
+#   - text: "Great, carry on!"
+
+#   utter_goodbye:
+#   - text: "Bye"
+
+#   utter_iamabot:
+#   - text: "I am a bot, powered by Rasa."
+
+# session_config:
+#   session_expiration_time: 60
+#   carry_over_slots_to_new_session: true

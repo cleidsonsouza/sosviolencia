@@ -1,92 +1,256 @@
 version: "2.0"
 
 nlu:
-- intent: greet
+- intent: cumprimentar
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - Oi
+    - oi
+    - Ou
+    - ou
+    - Oi robô
+    - oi robô
+    - Oi robo
+    - oi robo
+    - Oi amigo
+    - oi amigo
+    - Oi amiga
+    - oi amiga
+    - Oi gente
+    - oi gente
+    - Oi pessoal
+    - oi pessoal        
+    - Oi de novo
+    - oi de novo
+    - Oi novamente
+    - oi novamente
+    - Oi alguém aí
+    - oi alguém aí
+    - Oi alguem aí
+    - oi alguem aí
+    - Oi alguém ai
+    - oi alguém ai    
+    - Oi tudo bem
+    - oi tudo bem
+    - Oi socorro
+    - oi socorro
+    - Oi sos
+    - oi sos   
+    - Ei
+    - ei
+    - Ei robô
+    - ei robô
+    - Ei robo
+    - ei robo
+    - Ei amigo
+    - ei amigo
+    - Ei amiga
+    - ei amiga
+    - Ei gente
+    - ei gente
+    - Ei pessoal
+    - ei pessoal        
+    - Ei de novo
+    - ei de novo
+    - Ei novamente
+    - ei novamente
+    - Ei alguém aí
+    - ei alguém aí
+    - Ei alguem aí
+    - ei alguem aí
+    - Ei alguém ai
+    - ei alguém ai    
+    - Ei tudo bem
+    - ei tudo bem
+    - Ei socorro
+    - ei socorro
+    - Ei sos
+    - ei sos    
+    - Olá
+    - olá
+    - Olá robô
+    - olá robô
+    - Olá robo
+    - olá robo
+    - Olá amigo
+    - olá amigo
+    - Olá amiga
+    - olá amiga
+    - Olá gente
+    - olá gente
+    - Olá pessoal
+    - olá pessoal        
+    - Olá de novo
+    - olá de novo
+    - Olá novamente
+    - olá novamente
+    - Olá alguém aí
+    - olá alguém aí
+    - Olá alguem aí
+    - olá alguem aí
+    - Olá alguém ai
+    - olá alguém ai    
+    - Olá tudo bem
+    - olá tudo bem
+    - Olá socorro
+    - olá socorro
+    - Olá sos
+    - olá sos
+    - Bom dia
+    - bom dia
+    - Boa tarde
+    - boa tarde
+    - Boa noite
+    - boa noite       
+    - Socorro
+    - socorro
+    - SOS
+    - sos
+    
+- intent: despedir
+  examples: |
+    - Adeus
+    - Tchau
+    - tchau    
+    - Tchau amigo
+    - tchau amigo
+    - Tchau robô
+    - tchau robô
+    - Tchau robo
+    - tchau robo
+    - Tchau amiga
+    - tchau amiga
+    - Xau
+    - xau
+    - Até logo
+    - Ate logo
+    - até logo
+    - ate logo
+    - Até breve
+    - até beve
+    - Ate breve
+    - ate breve
+    - Até mais
+    - até mais
+    - Ate mais
+    - ate mais
+    - Até mais tarde
+    - até mais tarde
+    - Ate mais tarde
+    - ate mais tarde
+    - Obrigado
+    - obrigado
+    - Obg
+    - obg
+    - Muito obrigado
+    - muito obrigado
+    - Muito obrigado pela ajuda
+    - muito obrigado pela ajuda
+    - Muito obrigado por tudo
+    - muito obrigado por tudo
+    - Muito obrigada
+    - muito obrigada
+    - Muito obrigada pela ajuda
+    - muito obrigada pela ajuda
+    - Muito obrigada por tudo
+    - muito obrigada por tudo
+    - Obrigada
+    - Deus abençoe
+    - Conversamos depois
+    - conversamos depois
+    - Nos falamos depois
+    - nos falamos depois    
+    - Felicidades
+    - felicidades
+    - Ok
+    - ok
+    - Ok, obrigado!
+    - ok, obrigado
+    - Foi um prazer
+    - foi um prazer
+    - Perfeito, obrigado!
+    - Perfeito obrigado!
+    - perfeito, obrigado
+    - perfeito, obrigado!
+    - incrível obrigado
+    - Legal
+    - legal
+    - Bye
+    
+- intent: informar
+  examples: |
+    - 
 
-- intent: goodbye
-  examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+# - intent: goodbye
+#   examples: |
+#     - good afternoon
+#     - cu
+#     - good by
+#     - cee you later
+#     - good night
+#     - bye
+#     - goodbye
+#     - have a nice day
+#     - see you around
+#     - bye bye
+#     - see you later
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+# - intent: affirm
+#   examples: |
+#     - yes
+#     - y
+#     - indeed
+#     - of course
+#     - that sounds good
+#     - correct
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+# - intent: deny
+#   examples: |
+#     - no
+#     - n
+#     - never
+#     - I don't think so
+#     - don't like that
+#     - no way
+#     - not really
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+# - intent: mood_great
+#   examples: |
+#     - perfect
+#     - great
+#     - amazing
+#     - feeling like a king
+#     - wonderful
+#     - I am feeling very good
+#     - I am great
+#     - I am amazing
+#     - I am going to save the world
+#     - super stoked
+#     - extremely good
+#     - so so perfect
+#     - so good
+#     - so perfect
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+# - intent: mood_unhappy
+#   examples: |
+#     - my day was horrible
+#     - I am sad
+#     - I don't feel very well
+#     - I am disappointed
+#     - super sad
+#     - I'm so sad
+#     - sad
+#     - very sad
+#     - unhappy
+#     - not good
+#     - not very good
+#     - extremly sad
+#     - so saad
+#     - so sad
+
+# - intent: bot_challenge
+#   examples: |
+#     - are you a bot?
+#     - are you a human?
+#     - am I talking to a bot?
+#     - am I talking to a human?

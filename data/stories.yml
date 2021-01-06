@@ -6,8 +6,21 @@ stories:
   steps:
   - intent: cumprimentar
   - action: utter_cumprimentar  
-  - intent: informar
-  - action: utter_informar
+  - intent: pedir_informacoes_gerais
+  - action: utter_pedir_informacoes_gerais
+  - intent: pedir_informacoes_especificas_1
+  - action: utter_pedir_informacoes_especificas_1
+  - intent: despedir
+  - action: utter_despedir
+
+- story: caminho feliz loop
+  steps:
+  - intent: cumprimentar
+  - action: utter_cumprimentar  
+  - intent: pedir_informacoes_gerais
+  - action: utter_pedir_informacoes_gerais
+  - intent: pedir_informacoes_gerais
+  - action: utter_pedir_informacoes_gerais
   - intent: despedir
   - action: utter_despedir
 

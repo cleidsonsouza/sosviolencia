@@ -2,25 +2,122 @@ version: "2.0"
 
 intents:
   - cumprimentar
-  - informar
+  - pedir_informacoes_gerais
+  - pedir_informacoes_especificas_1
   - despedir  
   
 responses:
   utter_cumprimentar:  
+  - text: "Oi... eu sou um amigo e é um prazer te conhecer! \nComo posso te ajudar?"
+    buttons:
+      - title: "Fui vítima de violência"
+        payload: ''  
+      - title: "Estou ajudando alguém que foi vítima de violência"
+        payload: ''  
+      - title: "Desejo informações sobre violência"
+        payload: '/pedir_informacoes_gerais'
   - text: "É realmente uma alegria poder te atender por aqui. \nEm que posso te ajudar nesse momento?"
     buttons:
       - title: "Fui vítima de violência"
-        payload: '/informar'  
+        payload: ''  
       - title: "Estou ajudando alguém que foi vítima de violência"
-        payload: '/informar'  
+        payload: ''  
       - title: "Desejo apenas informações sobre violência"
-        payload: '/informar'
-  
-  utter_informar:
-  - text: "informacao 1 Isso... aquilo..."
+        payload: '/pedir_informacoes_gerais'
 
+  utter_pedir_informacoes_gerais:
+  - text: "Nós temos vários parceiros que fazem parte da nossa rede de enfrentamento à violência. Eles estão categorizados de acordo com os grupos a seguir. Escolha aquele sobre o qual você deseja obter informações."
+    buttons:
+      - title: "Órgãos de Segurança e Justiça"
+        payload: '/pedir_informacoes_especificas_1'  
+      - title: "Políticas de Atenção e Proteção às Mulheres"
+        payload: ''  
+      - title: "Órgãos de Fiscalização, Monitoramento e Controle"
+        payload: ''
+      - title: "Instituições de Pesquisa e Prevenção"
+        payload: ''
+      - title: "Voltar as opções anteriores"
+        payload: '/pedir_informacoes_gerais'    
+
+  utter_pedir_informacoes_especificas_1:
+  - text: | 
+      == Polícia Militar de Minas Gerais/Patrulha de Prevenção à Violência Doméstica ==
+      Público Alvo: mulheres e crianças
+      Endereço: Av. Major Alexandre Rodrigues, 243, Ibituruna
+      Telefone: (38) 3201-0295 (expediente administrativo) e 190 (todo o tempo)
+      E-mail institucional: 50bpmp3@gmail.com.
+      Responsável: Cabo Mourão      
+
+      == Delegacia Especializada de Atendimento às Mulheres ==
+      Público Alvo: atendimento policial de mulheres em situação de violência
+      doméstica ou sexual (crianças, adolescentes e adultos)
+      Endereço: Rua Enor de Brito, nº. 222. Bairro Morada do Sol
+      Telefone: (038) 3216-7909
+      E-mail institucional: delegaciamulheres@yahoo.com.br
+      Responsável: Dra. Karine Maia Costa (Delegada da Mulher)
+      Horário de funcionamento: 8h às 12 e 14h às 17h em dias úteis. (Não abre aos
+      sábados, domingos, feriados). Sendo necessário a vítima deve buscar a PM
+      para fazer a ocorrência policial na Delegacia de Plantão.
+
+      == 16ª Promotoria de Justiça da Comarca de Montes Claros ==
+      Público Alvo: promotoria responsável pelo acompanhamento das ações judiciais 
+      que envolvem os crimes da Lei Maria da Penha na Comarca de Montes Claros.
+      Endereço: Av. Cula Mangabeira, nº. 345. Bairro Centro
+      Telefone: 3223-3343 / 3223-3416
+      E-mail institucional:violenciadomesticamc@mpmg.mp.br
+      Responsável: Dr. Guilherme Roedel (promotor de justiça)
+      Horário de funcionamento: 12h às 18h, em dias úteis. 
+      (Não abre aos sábados, domingos e feriados)
+
+      == Poder Judiciário ==
+      Público Alvo: Vara Especializada responsável pelo julgamento dos processos
+      da lei Maria Penha na comarca de Montes Claros/MG
+      Endereço: Rua Raimundo Penalva, nº. 70. Bairro: Vila Guilhermina
+      Telefone: (038) 3229-1300/3229-1334
+      E-mail institucional: não tem
+      Responsável: Juiz Dr. Geraldo
+
+      == Defensoria Pública do Estado de Minas Gerais – Unidade Montes Claros/MG /
+      Núcleo Especializado em Defesa do Direito da Mulher em Situação de Violência ==
+      Público Alvo: atendimento com orientações jurídicas para mulheres em
+      situação de violência doméstica.
+      Endereço: Av. Dr. João Luís de Almeida, nº. 454. Bairro Vila Guilhermina
+      Telefone: 3222-1361
+      E-mail institucional:
+      Horário de atendimento: 8h às 18h
+      Responsável: 
+
+      == Central de Acompanhamento de Penas Alternativas – CEAPA ==
+      Público Alvo: homens (agressores) que estão em cumprimento de alternativas
+      penais em razão dos crimes de violência doméstica e intrafamiliar.
+      Endereço: Rua Tiradentes, 422. 2º piso. Centro
+      Telefone: (38)3222-9680
+      E-mail institucional: montesclarosceapa@gmail.com
+      Responsável: Vanessa Alves Silva - contato: 99135-2957
+      Horário de funcionamento: 12:00 às 17:30 hs
+
+      == Programa de Mediação de Conflitos UPC Santos Reis ==
+      Público Alvo: moradores dos bairros Santos Reis, Vila Antônio Narciso, Nossa
+      Senhora Aparecida, Bela Vista, Vila São Francisco de Assis, Jardim Brasil,
+      Amazonas, Bela Paisagem, Vila Atlântida, Vila Áurea I e II, Nova Morada, Santa
+      Eugênia, Vila Alice, Eldorado, Vila Castelo Branco, Distrito Industrial e Cidade
+      Industrial.
+      Endereço: Rua Geraldino Machado, 785 – Santos Reis
+      Telefone: (38) 3212-8116 / 3212-7622
+      E-mail institucional: santosreispmc@gmail.com
+      Responsável:
+      Horário de atendimento: 11h às 17h, segunda a sexta
+
+  utter_pedir_informacoes_especificas_2:
+  - text: | 
+      
+
+  utter_pedir_informacoes_especificas_3:
+  - text: | 
+      
   utter_despedir:
   - text: "Até mais... Precisando, estou à disposição."
+  - text: "Foi uma alegria poder te atender. Precisando, pode me chamar novamente."
 
 session_config:
   session_expiration_time: 60

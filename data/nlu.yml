@@ -176,10 +176,14 @@ nlu:
     - legal
     - Bye
     
-- intent: informar
+- intent: pedir_informacoes_gerais
   examples: |
-    - 
+    - Desejo apenas informações sobre violência
+    - Voltar as opções anteriores
 
+- intent: pedir_informacoes_especificas_1
+  examples: |
+    - Órgãos de Segurança e Justiça
 
 # - intent: goodbye
 #   examples: |
